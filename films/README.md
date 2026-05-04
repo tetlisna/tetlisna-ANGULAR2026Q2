@@ -36,6 +36,20 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## GitHub Pages deployment
+
+This repository is configured for GitHub Pages project hosting at:
+
+`https://tetlisna.github.io/tetlisna-ANGULAR2026Q2/`
+
+Use the production Pages build locally with:
+
+```bash
+npm run build:pages
+```
+
+The GitHub Actions workflow in `.github/workflows/deploy-pages.yml` publishes the Angular browser build from `dist/films/browser`.
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
