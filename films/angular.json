@@ -41,6 +41,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/tetlisna-ANGULAR2026Q2/",
               "budgets": [
                 {
                   "type": "initial",
