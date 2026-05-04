@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1rem;
+
+  &__code {
+    font-size: 6rem;
+    font-weight: 700;
+    color: $accent;
+    line-height: 1;
+  }
+
+  &__msg {
+    font-size: 1.2rem;
+    color: $text-faint;
+  }
+
+  &__link {
+    margin-top: 0.5rem;
+    color: $accent;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text-white;
+    }
+  }
+}

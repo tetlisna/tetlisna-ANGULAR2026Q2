@@ -1,0 +1,23 @@
+<section class="home">
+  <input
+    class="home__search"
+    appAutofocus
+    [value]="searchQuery()"
+    (input)="searchQuery.set($any($event.target).value)"
+    placeholder="Search films..."
+  />
+
+  @if (filteredFilms().length === 0) {
+    <p class="home__empty">Nothing found</p>
+  } @else {
+    <div class="home__grid">
+      @for (film of filteredFilms(); track film.id) {
+        <app-film-card
+          [film]="film"
+          (cardClick)="onCardClick($event)"
+          (toggleFavorite)="onToggleFavorite($event)"
+        />
+      }
+    </div>
+  }
+</section>

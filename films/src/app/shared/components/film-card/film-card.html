@@ -1,0 +1,42 @@
+<article
+  class="card"
+  tabindex="0"
+  role="button"
+  (click)="onCardClick()"
+  (keyup.enter)="onCardClick()"
+>
+  <div class="card__poster-wrap">
+    <img
+      class="card__poster"
+      [src]="film().posterUrl"
+      [alt]="film().title"
+    />
+    <div class="card__overlay">
+      <span class="card__rating">{{ film().rating }}/10</span>
+    </div>
+    <button
+      class="card__fav"
+      [class.card__fav--active]="film().isFavorite"
+      (click)="onToggleFavorite($event)"
+      [title]="film().isFavorite
+        ? 'Remove from favorites'
+        : 'Add to favorites'"
+    >
+      {{ film().isFavorite
+        ? '♥'
+        : '♡'
+      }}
+    </button>
+  </div>
+
+  <div class="card__body">
+    <h3 class="card__title">{{ film().title }}</h3>
+    <div class="card__meta">
+      <span class="card__year">{{ film().year }}</span>
+      <span class="card__dot">·</span>
+      <span class="card__genre">{{ film().genre }}</span>
+    </div>
+    
+    <div class="card__stars">{{ stars }}</div>
+  </div>
+</article>

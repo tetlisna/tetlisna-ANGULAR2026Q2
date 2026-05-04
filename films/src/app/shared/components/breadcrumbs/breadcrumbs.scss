@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 2rem;
+  background: $bg-dark;
+  border-bottom: 1px solid $bg-surface;
+  font-size: 0.85rem;
+
+  &__link {
+    color: $accent;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text-white;
+    }
+  }
+
+  &__current {
+    color: $text-faint;
+  }
+
+  &__sep {
+    color: $text-separator;
+  }
+}
