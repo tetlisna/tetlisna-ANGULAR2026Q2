@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+.footer {
+  padding: 1.25rem 2rem;
+  background: $bg-darkest;
+  border-top: 1px solid $border-strong;
+  text-align: center;
+  color: $text-dimmed;
+  font-size: 0.85rem;
+
+  a {
+    color: $accent;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text-white;
+    }
+  }
+}

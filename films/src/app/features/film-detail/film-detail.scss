@@ -1,0 +1,79 @@
+@use 'variables' as *;
+
+.detail {
+  padding: 2rem;
+
+  &__back {
+    margin-bottom: 1.5rem;
+    color: $accent;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text-white;
+    }
+  }
+
+  &__layout {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
+  }
+
+  &__poster {
+    width: 280px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: 1rem;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__badge {
+    padding: 0.3rem 0.75rem;
+    background: $bg-surface;
+    border: 1px solid $border-default;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: $text-secondary;
+
+    &--gold {
+      border-color: $accent;
+      color: $accent;
+    }
+  }
+
+  &__description {
+    color: $text-muted;
+    line-height: 1.8;
+    font-size: 0.95rem;
+  }
+
+  &__missing {
+    text-align: center;
+    color: $text-dimmed;
+    margin-top: 4rem;
+  }
+}

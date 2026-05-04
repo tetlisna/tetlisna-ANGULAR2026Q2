@@ -1,0 +1,24 @@
+@if (film(); as film) {
+  <section class="detail">
+    <button class="detail__back" (click)="onBack()">← Back</button>
+
+    <div class="detail__layout">
+      <img class="detail__poster" [src]="film.posterUrl" [alt]="film.title" />
+
+      <div class="detail__info">
+        <h1 class="detail__title">{{ film.title }}</h1>
+
+        <div class="detail__meta">
+          <span class="detail__badge">{{ film.year }}</span>
+          <span class="detail__badge">{{ film.genre }}</span>
+          <span class="detail__badge detail__badge--gold">★ {{ film.rating }}/10</span>
+          <span class="detail__badge">{{ film.duration | duration }}</span>
+        </div>
+
+        <p class="detail__description">{{ film.description }}</p>
+      </div>
+    </div>
+  </section>
+} @else {
+  <p class="detail__missing">Film not found.</p>
+}
